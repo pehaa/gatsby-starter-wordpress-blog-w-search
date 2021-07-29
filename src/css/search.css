@@ -1,0 +1,133 @@
+.search-container,
+.search-open-button {
+  position: fixed;
+  top: 0;
+  background-color: #f0f0f0;
+}
+.search-container {
+  right: 0;
+  z-index: 100;
+  padding: 0.5rem 0.5rem 1.5rem 1rem;
+  width: min(65%, 24rem);
+}
+.search-open-button {
+  color: inherit;
+  background: #f0f0f0;
+  z-index: 99;
+  right: 1rem;
+}
+.search-container .loading {
+  margin-top: 1rem;
+  font-style: italic;
+}
+.search-container a[aria-current] {
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  padding-top: 0.75rem;
+}
+.search-container a[aria-current],
+.search-container [aria-current] + * {
+  color: black;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  background: #dbdbdb;
+}
+.search-container [aria-current] + * {
+  padding-bottom: 0.75rem;
+}
+.search-form {
+  position: relative;
+  margin-right: 0.5rem;
+}
+.search-open-button,
+.search-container button {
+  -webkit-appearance: none;
+  font: inherit;
+  font-family: Montserrat;
+  border: none;
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.search-form button,
+.search-results button {
+  background: var(--color-primary);
+  color: white;
+}
+.search-container button:disabled {
+  cursor: auto;
+}
+.search-form button {
+  position: absolute;
+  right: 0;
+  padding: 0.5rem;
+}
+.search-close-button {
+  position: absolute;
+  top: 0.25rem;
+  right: 1rem;
+  padding: 0;
+  border: none;
+  background: transparent;
+  text-decoration: underline;
+  font-size: 0.875rem;
+  color: inherit;
+}
+
+.search-results {
+  background: var(--black);
+  outline: 1px dashed var(--dark-taupe);
+  outline-offset: -6px;
+  margin-top: 0.5rem;
+  overflow-y: auto;
+  max-height: calc(100vh - 8rem);
+}
+.search-results ul {
+  list-style: none;
+  margin: 0 1rem 0 0;
+}
+.search-results li {
+  margin: 0 0 0.5rem;
+}
+.search-results .post-excerpt * {
+  font-size: 0.8125rem;
+}
+.search-container h2 {
+  position: sticky;
+  top: 0rem;
+  padding: 0.5rem 0;
+  background: linear-gradient(to bottom, #f0f0f0 40%, transparent);
+}
+.search-container h2,
+.search-container p {
+  font-size: 1rem;
+  margin: 0;
+}
+.search-results a {
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.search-form [type="search"] {
+  -webkit-appearance: none;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 3px;
+  border: none;
+  box-shadow: none;
+  font: inherit;
+}
+
+.search-form label {
+  font-family: Montserrat;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+.search-form ::-webkit-search-cancel-button {
+  /* Remove default */
+  -webkit-appearance: none;
+}

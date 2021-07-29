@@ -8,6 +8,7 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
+    "@apollo/client": "^3.3.21",
     "gatsby": "^3.3.0",
     "gatsby-image": "^3.3.0",
     "gatsby-plugin-manifest": "^3.3.0",
