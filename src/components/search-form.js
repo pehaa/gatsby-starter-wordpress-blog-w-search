@@ -15,9 +15,10 @@ const SearchForm = ({ searchTerm, setSearchTerm }) => {
         id="search"
         type="search"
         value={value}
-        placeholder="🔎 ..."
+        placeholder="ex. block"
         onChange={e => setValue(e.target.value)}
         autoFocus
+        autoComplete="off"
       />
       <button type="submit">Submit</button>
     </form>
