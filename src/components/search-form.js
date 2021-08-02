@@ -17,8 +17,8 @@ const SearchForm = ({ searchTerm, setSearchTerm }) => {
         value={value}
         placeholder="ex. block"
         onChange={e => setValue(e.target.value)}
-        autoFocus
         autoComplete="off"
+        autoCapitalize="none"
       />
       <button type="submit">Submit</button>
     </form>
