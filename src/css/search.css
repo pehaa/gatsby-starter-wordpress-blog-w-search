@@ -81,7 +81,7 @@
   outline-offset: -6px;
   margin-top: 0.5rem;
   overflow-y: auto;
-  max-height: calc(100vh - 8rem);
+  max-height: calc(100vh - 12rem);
 }
 .search-results ul {
   list-style: none;
@@ -97,7 +97,7 @@
   position: sticky;
   top: 0rem;
   padding: 0.5rem 0;
-  background: linear-gradient(to bottom, #f0f0f0 40%, transparent);
+  background: linear-gradient(to bottom, #f0f0f0 40%, #f0f0f000);
 }
 .search-container h2,
 .search-container p {
