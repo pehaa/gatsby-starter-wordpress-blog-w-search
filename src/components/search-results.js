@@ -4,8 +4,8 @@ import { useQuery, gql } from "@apollo/client"
 import parse from "html-react-parser"
 
 const GET_RESULTS = gql`
-  query($search: String, $after: String) {
-    posts(first: 10, after: $after, where: { search: $search }) {
+  query($searchTerm: String, $after: String) {
+    posts(first: 10, after: $after, where: { search: $searchTerm }) {
       edges {
         node {
           id
@@ -24,7 +24,7 @@ const GET_RESULTS = gql`
 
 const SearchResults = ({ searchTerm }) => {
   const all = useQuery(GET_RESULTS, {
-    variables: { search: searchTerm, after: "" },
+    variables: { searchTerm, after: "" },
   })
   const { data, loading, error, fetchMore } = all
   if (loading && !data)
