@@ -12,7 +12,7 @@ const Bio = () => {
     <div className="new-bio">
       <p>
         This is{" "}
-        <a href="https://github.com/pehaa/pehaa-gatsby-starter-wordpress-blog-search">
+        <a href="https://github.com/pehaa/pehaa-gatsby-starter-wordpress-blog-w-search">
           a fork
         </a>{" "}
         of the{" "}
