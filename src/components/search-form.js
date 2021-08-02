@@ -15,7 +15,7 @@ const SearchForm = ({ searchTerm, setSearchTerm }) => {
         id="search"
         type="search"
         value={value}
-        placeholder="ex. block"
+        placeholder="ex. gallery"
         onChange={e => setValue(e.target.value)}
         autoComplete="off"
         autoCapitalize="none"
