@@ -19,12 +19,9 @@ const Bio = () => {
         <a href="https://github.com/gatsbyjs/gatsby-starter-wordpress-blog">
           gatsby-starter-wordpress-blog.
         </a>{" "}
-        It comes with support for <strong>search functionality</strong>{" "}
-        <span role="img" aria-lable="magnifying glass">
-          🔎.
-        </span>{" "}
-        Search results are provided by WordPress search query with some help
-        from <a href="https://www.wpgraphql.com/">WPGraphQL</a> and{" "}
+        It comes with support for <strong>search functionality.</strong> Search
+        results are provided by WordPress search query with some help from{" "}
+        <a href="https://www.wpgraphql.com/">WPGraphQL</a> and{" "}
         <a href="https://www.apollographql.com/docs/react/">Apollo Client.</a>
       </p>
     </div>
