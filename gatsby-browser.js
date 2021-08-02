@@ -23,7 +23,9 @@ const cache = new InMemoryCache({
 })
 const client = new ApolloClient({
   /* the GraphQL server endpoint */
-  uri: "https://wpgatsbydemo.wpengine.com/graphql",
+  uri:
+    "https://pehaa.xyz/five-boots/graphql" ||
+    `https://wpgatsbydemo.wpengine.com/graphql`,
   cache,
 })
 export const wrapRootElement = ({ element }) => (
@@ -31,5 +33,10 @@ export const wrapRootElement = ({ element }) => (
 )
 
 export const wrapPageElement = ({ element }) => {
-  return <><Search />{element}</>
+  return (
+    <>
+      <Search />
+      {element}
+    </>
+  )
 }
