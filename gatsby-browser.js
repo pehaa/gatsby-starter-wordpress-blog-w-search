@@ -8,7 +8,13 @@ import "./src/css/normalize.css"
 // custom CSS styles
 import "./src/css/style.css"
 import React from "react"
-import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client"
+import {
+  ApolloClient,
+  HttpLink,
+  InMemoryCache,
+  ApolloProvider,
+} from "@apollo/client"
+import fetch from "cross-fetch"
 import { relayStylePagination } from "@apollo/client/utilities"
 import Search from "./src/components/search"
 
@@ -21,9 +27,13 @@ const cache = new InMemoryCache({
     },
   },
 })
+const httpLink = new HttpLink({
+  uri: `https://wpgatsbydemo.wpengine.com/graphql`,
+  fetch,
+})
 const client = new ApolloClient({
   /* the GraphQL server endpoint */
-  uri: `https://wpgatsbydemo.wpengine.com/graphql`,
+  httpLink,
   cache,
 })
 export const wrapRootElement = ({ element }) => (
