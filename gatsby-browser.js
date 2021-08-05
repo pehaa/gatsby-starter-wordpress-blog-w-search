@@ -27,13 +27,12 @@ const cache = new InMemoryCache({
     },
   },
 })
-const httpLink = new HttpLink({
+const link = new HttpLink({
   uri: `https://wpgatsbydemo.wpengine.com/graphql`,
   fetch,
 })
 const client = new ApolloClient({
-  /* the GraphQL server endpoint */
-  httpLink,
+  link,
   cache,
 })
 export const wrapRootElement = ({ element }) => (
